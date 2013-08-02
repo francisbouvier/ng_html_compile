@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html ng-app="MyApp">
+
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body ng-controller="HomeCtrl">
+
+    <div ng-html-compile="template"></div>
+
+    <button ng-click="change()">Change</button>
+
+    <ul>
+      <li>{{firstName}}</li>
+      <li>{{lastName}}</li>
+    </ul>
+
+    <script src="libs/angular.js"></script>
+    <script src="libs/ngHtmlCompile.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

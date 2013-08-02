@@ -1,0 +1,14 @@
+*pyc
+*~
+*.log
+*.coverage
+*.sqlite
+
+bin/
+include/
+lib/
+.ropeproject/
+*/htmlcov/
+*.egg-info/
+*/migrations/
+*/static_prod/
