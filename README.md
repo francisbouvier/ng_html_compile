@@ -6,27 +6,31 @@
 
 In your *index.html*:
 
-	<html ng-app="MyApp">
+```html
+<html ng-app="MyApp">
 
-		<body ng-controller="HomeCtrl">
+	<body ng-controller="HomeCtrl">
 
-			<div ng-html-compile="htmlTemplate"></div>
-			<div>{{name}}</div>
+		<div ng-html-compile="htmlTemplate"></div>
+		<div>{{name}}</div>
 
-			<script src="libs/angular.js"></script>
-			<script src="libs/ngHtmlCompile.js"></script>
-			<script src="script.js"></script>
+		<script src="libs/angular.js"></script>
+		<script src="libs/ngHtmlCompile.js"></script>
+		<script src="script.js"></script>
 
-		</body>
+	</body>
 
-	</html>
+</html>
+```
 
 In your *script.js*:
 
-	var myApp = angular.module('MyApp', ['ngHtmlCompile']);
+```javascript
+var myApp = angular.module('MyApp', ['ngHtmlCompile']);
 
-	function HomeCtrl($scope, $compile) {
-		$scope.name = 'Camaron de la Isla;
-		$scope.htmlTemplate = "<b>Name</b> <input type='text' ng-model='name' />";
-	};
+function HomeCtrl($scope, $compile) {
+	$scope.name = 'Camaron de la Isla';
+	$scope.htmlTemplate = '<b>Name</b> <input type="text" ng-model="name" />';
+};
+```
 
