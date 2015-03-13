@@ -3,10 +3,10 @@ angular.module('ngHtmlCompile', []).
 	return {
 	    restrict: 'A',
 	    link: function(scope, element, attrs) {
-		scope.$watch(attrs.ngHtmlCompile, function(newValue, oldValue) {
+		scope.$watch(attrs.ngHtmlCompile, function(newValue) {
 		    element.html(newValue);
 		    $compile(element.contents())(scope);
 		});
 	    }
-	}
+	};
     });
