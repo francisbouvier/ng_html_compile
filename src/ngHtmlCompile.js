@@ -1,5 +1,5 @@
 angular.module('ngHtmlCompile', []).
-    directive('ngHtmlCompile', function($compile) {
+    directive('ngHtmlCompile', ['$compile', function($compile) {
 	return {
 	    restrict: 'A',
 	    link: function(scope, element, attrs) {
@@ -9,4 +9,4 @@ angular.module('ngHtmlCompile', []).
 		});
 	    }
 	};
-    });
+    }]);
